@@ -95,11 +95,6 @@ install:
   - git clone https://github.com/spacy-dev/Spacy.git
   - cd Spacy && mkdir build && cd build && cmake .. && make -j2 && sudo make install
 
-  - cd ${TRAVIS_BUILD_DIR}
-  - mkdir build && cd build
-  - cmake .. -DEigen=ON
-  - make -j2 && ctest
-
 script:
   - cd ${TRAVIS_BUILD_DIR}
   - mkdir build && cd build
