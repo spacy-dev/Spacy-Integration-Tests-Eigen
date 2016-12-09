@@ -54,8 +54,7 @@ install:
   ############################################################################
   # All the dependencies are installed in ${TRAVIS_BUILD_DIR}/deps/
   ############################################################################
-  - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
-  - mkdir -p ${DEPS_DIR} && cd ${DEPS_DIR}
+  - cd ${TRAVIS_BUILD_DIR} && mkdir deps && cd deps
   
   ############################################################################
   # Override compiler if needed
