@@ -1,6 +1,5 @@
 #pragma once
 
-#include <Eigen/Dense>
 #include <Spacy/Adapter/Eigen/c1Operator.hh>
 #include <Spacy/Adapter/Eigen/c2Functional.hh>
 

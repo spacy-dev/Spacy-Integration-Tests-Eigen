@@ -2,7 +2,7 @@
 
 #include <Spacy/vector.hh>
 #include <Spacy/vectorSpace.hh>
-#include <Spacy/Spaces/realSpace.hh>
+#include <Spacy/Spaces/RealSpace.h>
 
 namespace Mock
 {
