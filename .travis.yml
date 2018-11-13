@@ -67,6 +67,14 @@ install:
   - sudo cp -r FunG/fung /usr/local/include
 
   ############################################################################
+  # Install Eigen
+  ############################################################################
+
+  - cd ${DEPS}
+  - git clone https://github.com/eigenteam/eigen-git-mirror.git
+  - cd eigen-git-mirror && mkdir build && cd build && cmake .. && sudo make install
+
+  ############################################################################
   # Install Spacy
   ############################################################################
   - cd ${DEPS}
