@@ -1,4 +1,4 @@
-#include "vector.hh"
+#include "Vector.h"
 
 #include <Spacy/vector.hh>
 #include <Spacy/vectorSpace.hh>
@@ -54,4 +54,10 @@ namespace Mock
 
   void Vector::toFile(const std::string&) const
   {}
+
+
+  Vector VectorCreator::operator()(const Spacy::VectorSpace* space) const
+  {
+    return Vector{*space};
+  }
 }

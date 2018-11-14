@@ -1,9 +1,9 @@
-#include <gtest.hh>
-
 #include <Eigen/Dense>
 #include <Spacy/spacy.h>
-#include <Spacy/Adapter/eigen.hh>
+#include <Spacy/Adapter/Eigen.h>
 #include <fung/fung.hh>
+
+#include <gtest/gtest.h>
 
 const constexpr int dim = 2;
 using Vector = Eigen::VectorXd;
@@ -22,10 +22,10 @@ auto get_fung_operator()
 
     // use FunG to generate operator
     auto v = FunG::variable<0>(Vector(dim));
-    return (1+dot(v,A*v))*v + b;
+    return A*v + b;
 }
 
-TEST(SpacyEigenFunGIntegration,Nonlinear2DExample)
+TEST(SpacyEigenFunGIntegration,Linear2DExample)
 {
     using namespace Spacy;
 
@@ -37,6 +37,6 @@ TEST(SpacyEigenFunGIntegration,Nonlinear2DExample)
     auto x = localNewton(A);
 
     const auto& x_ = get(cast_ref<Rn::Vector>(x));
-    EXPECT_DOUBLE_EQ( x_(0), 1.0 );
-    EXPECT_DOUBLE_EQ( x_(1), 2.0 );
+    EXPECT_DOUBLE_EQ( x_(0), 10.0 );
+    EXPECT_DOUBLE_EQ( x_(1), 10.0 );
 }

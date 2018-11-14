@@ -1,10 +1,10 @@
-#include <gtest.hh>
+#include <Spacy/Adapter/Eigen/Vector.h>
+#include <Spacy/Adapter/Eigen/VectorCreator.h>
+#include <MockSetup.h>
 
-#include <Spacy/Adapter/Eigen/vector.hh>
-#include <Spacy/Adapter/Eigen/vectorCreator.hh>
-#include <mockSetup.hh>
+#include "Setup.h"
 
-#include "setup.hh"
+#include <gtest/gtest.h>
 
 using namespace Spacy;
 
@@ -110,3 +110,10 @@ TEST(Rn,Comparison)
   spacy_w.get()[0] = 1 - 1.1e-5;
   ASSERT_FALSE( spacy_v == spacy_w );
 }
+
+TEST(Rn,SingleSpaceCreator)
+{
+  auto V = Rn::makeHilbertSpace( testDim() );
+  EXPECT_EQ( creator<Rn::VectorCreator>(V).dim() , testDim() );
+}
+

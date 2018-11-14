@@ -3,7 +3,7 @@
 #include <Spacy/vector.hh>
 #include <Spacy/Spaces/RealSpace.h>
 
-#include "norm.hh"
+#include "Norm.h"
 
 namespace Mock
 {

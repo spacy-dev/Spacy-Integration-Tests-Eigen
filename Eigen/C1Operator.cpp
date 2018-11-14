@@ -1,14 +1,14 @@
-#include <gtest.hh>
-
-#include <Spacy/Adapter/Eigen/vector.hh>
-#include <Spacy/Adapter/Eigen/vectorCreator.hh>
-#include <Spacy/Adapter/Eigen/c1Operator.hh>
-#include <Spacy/Adapter/Eigen/linearOperator.hh>
+#include <Spacy/Adapter/Eigen/Vector.h>
+#include <Spacy/Adapter/Eigen/VectorCreator.h>
+#include <Spacy/Adapter/Eigen/C1Operator.h>
+#include <Spacy/Adapter/Eigen/LinearOperator.h>
 #include <Spacy/vector.hh>
 #include <Spacy/zeroVectorCreator.hh>
 #include <Spacy/Util/cast.hh>
 
-#include "setup.hh"
+#include "Setup.h"
+
+#include <gtest/gtest.h>
 
 using namespace Spacy;
 

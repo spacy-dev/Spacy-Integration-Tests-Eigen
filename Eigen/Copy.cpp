@@ -1,11 +1,11 @@
-#include <gtest.hh>
+#include <Spacy/Adapter/Eigen/Copy.h>
+#include <Spacy/Adapter/Eigen/VectorCreator.h>
 
-#include <Spacy/Adapter/Eigen/util.hh>
-#include <Spacy/Adapter/Eigen/vectorCreator.hh>
+#include <MockSetup.h>
 
-#include <mockSetup.hh>
+#include "Setup.h"
 
-#include "setup.hh"
+#include <gtest/gtest.h>
 
 using namespace Spacy;
 

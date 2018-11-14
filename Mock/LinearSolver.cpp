@@ -1,4 +1,4 @@
-#include "linearSolver.hh"
+#include "LinearSolver.h"
 
 #include <Spacy/vector.hh>
 
