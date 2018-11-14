@@ -1,6 +1,6 @@
 #include "linearOperator.hh"
 
-#include <Spacy/Spaces/realSpace.hh>
+#include <Spacy/Spaces/RealSpace.h>
 #include "linearSolver.hh"
 
 namespace Mock
