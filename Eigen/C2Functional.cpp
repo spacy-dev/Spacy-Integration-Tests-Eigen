@@ -5,7 +5,7 @@
 #include <Spacy/Adapter/Eigen/LinearSolver.h>
 #include <Spacy/linearSolver.hh>
 #include <Spacy/zeroVectorCreator.hh>
-#include <Spacy/Util/cast.hh>
+#include <Spacy/Util/Cast.h>
 
 #include "Setup.h"
 

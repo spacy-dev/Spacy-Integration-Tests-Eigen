@@ -1,7 +1,7 @@
 #include <Spacy/Adapter/Eigen/LinearSolver.h>
 #include <Spacy/vector.hh>
 #include <Spacy/vectorSpace.hh>
-#include <Spacy/Util/cast.hh>
+#include <Spacy/Util/Cast.h>
 
 #include <Mock/Norm.h>
 #include <Mock/Vector.h>

@@ -4,7 +4,7 @@
 #include <Spacy/Adapter/Eigen/LinearOperator.h>
 #include <Spacy/vector.hh>
 #include <Spacy/zeroVectorCreator.hh>
-#include <Spacy/Util/cast.hh>
+#include <Spacy/Util/Cast.h>
 
 #include "Setup.h"
 
