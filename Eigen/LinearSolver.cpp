@@ -6,6 +6,8 @@
 #include <Mock/Norm.h>
 #include <Mock/Vector.h>
 
+#include <gtest/gtest.h>
+
 using namespace Spacy;
 
 TEST(Eigen, LinearSolver)
