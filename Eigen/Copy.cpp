@@ -1,4 +1,5 @@
 #include <Spacy/Adapter/Eigen/Copy.h>
+#include <Spacy/Adapter/Eigen/Vector.h>
 #include <Spacy/Adapter/Eigen/VectorCreator.h>
 
 #include <MockSetup.h>

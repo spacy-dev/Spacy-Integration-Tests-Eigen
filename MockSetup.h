@@ -9,15 +9,14 @@
 #include <Spacy/vector.hh>
 #include <Spacy/vectorSpace.hh>
 #include <Spacy/zeroVectorCreator.hh>
-#include <Spacy/Spaces/realSpace.hh>
-#include <Spacy/Spaces/productSpace.hh>
-#include <Spacy/Util/cast.hh>
-#include <Spacy/Util/Exceptions/incompatibleSpaceException.hh>
+#include <Spacy/Spaces/RealSpace.h>
+#include <Spacy/Spaces/ProductSpace.h>
+#include <Spacy/Util/Cast.h>
+#include <Spacy/Util/Exceptions.h>
 
-#include <Mock/vector.hh>
-#include <Mock/vectorCreator.hh>
-#include <Mock/scalarProduct.hh>
-#include <Mock/norm.hh>
+#include <Mock/Vector.h>
+#include <Mock/ScalarProduct.h>
+#include <Mock/Norm.h>
 
 template <class Space, class Spaces, unsigned... indices>
 inline auto makeTuple(Space&& space, const Spaces& spaces, std::integer_sequence<unsigned,indices...>)
