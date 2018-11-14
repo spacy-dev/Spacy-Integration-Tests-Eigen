@@ -48,4 +48,5 @@ namespace Mock
     public:
         Vector operator()(const Spacy::VectorSpace* space) const;
     };
+
 }
