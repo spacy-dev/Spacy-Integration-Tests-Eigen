@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Spacy/Adapter/Eigen/c1Operator.hh>
-#include <Spacy/Adapter/Eigen/c2Functional.hh>
+#include <Spacy/Adapter/Eigen/C1Operator.h>
+#include <Spacy/Adapter/Eigen/C2Functional.h>
 
 inline auto testDim()
 {
