@@ -1,9 +1,9 @@
 #include <Spacy/Adapter/Eigen/LinearSolver.h>
 #include <Spacy/Adapter/Eigen/Vector.h>
 #include <Spacy/Adapter/Eigen/VectorCreator.h>
-#include <Spacy/vector.hh>
-#include <Spacy/vectorSpace.hh>
-#include <Spacy/zeroVectorCreator.hh>
+#include <Spacy/Vector.h>
+#include <Spacy/VectorSpace.h>
+#include <Spacy/ZeroVectorCreator.h>
 #include <Spacy/Util/Cast.h>
 
 #include <Mock/Norm.h>

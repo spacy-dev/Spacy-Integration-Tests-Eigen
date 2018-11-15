@@ -1,5 +1,5 @@
 #include <Eigen/Dense>
-#include <Spacy/spacy.h>
+#include <Spacy/Spacy.h>
 #include <Spacy/Adapter/Eigen.h>
 #include <fung/fung.hh>
 

@@ -3,8 +3,8 @@
 #include <Spacy/Adapter/Eigen/C2Functional.h>
 #include <Spacy/Adapter/Eigen/LinearOperator.h>
 #include <Spacy/Adapter/Eigen/LinearSolver.h>
-#include <Spacy/linearSolver.hh>
-#include <Spacy/zeroVectorCreator.hh>
+#include <Spacy/LinearSolver.h>
+#include <Spacy/ZeroVectorCreator.h>
 #include <Spacy/Util/Cast.h>
 
 #include "Setup.h"

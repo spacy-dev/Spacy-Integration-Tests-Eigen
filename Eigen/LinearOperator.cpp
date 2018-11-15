@@ -2,8 +2,8 @@
 #include <Spacy/Adapter/Eigen/VectorCreator.h>
 #include <Spacy/Adapter/Eigen/LinearOperator.h>
 #include <Spacy/Adapter/Eigen/LinearSolver.h>
-#include <Spacy/vector.hh>
-#include <Spacy/zeroVectorCreator.hh>
+#include <Spacy/Vector.h>
+#include <Spacy/ZeroVectorCreator.h>
 #include <Spacy/Util/Cast.h>
 
 #include "Setup.h"

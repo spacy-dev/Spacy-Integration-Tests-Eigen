@@ -1,6 +1,6 @@
 #include "LinearSolver.h"
 
-#include <Spacy/vector.hh>
+#include <Spacy/Vector.h>
 
 namespace Mock
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Spacy/linearSolver.hh>
-#include <Spacy/zeroVectorCreator.hh>
+#include <Spacy/LinearSolver.h>
+#include <Spacy/ZeroVectorCreator.h>
 #include <Spacy/Util/Mixins/Get.h>
 #include <Spacy/Util/Base/AddArithmeticOperators.h>
 #include <Spacy/Util/Base/OperatorBase.h>

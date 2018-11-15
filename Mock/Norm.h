@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Spacy/vector.hh>
+#include <Spacy/Vector.h>
 #include <Spacy/Spaces/RealSpace.h>
 
 namespace Mock
