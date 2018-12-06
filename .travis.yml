@@ -65,7 +65,7 @@ install:
   - cd ${DEPS}
   - git clone https://github.com/lubkoll/FunG.git
   - cd FunG && mkdir build && cd build
-  - cmake --build . --target install
+  - cmake .. && cmake --build . --target install
 
   ############################################################################
   # Install Eigen
