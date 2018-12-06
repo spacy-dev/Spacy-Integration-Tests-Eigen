@@ -64,7 +64,8 @@ install:
   ############################################################################
   - cd ${DEPS}
   - git clone https://github.com/lubkoll/FunG.git
-  - sudo cp -r FunG/fung /usr/local/include
+  - cd FunG && mkdir build && cd build
+  - cmake --build . --target install
 
   ############################################################################
   # Install Eigen
