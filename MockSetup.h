@@ -166,7 +166,7 @@ inline auto createSecondTestVector(const Spacy::VectorSpace& V)
     return v;
 }
 
-double toDouble(const Spacy::Vector& v)
+inline double toDouble(const Spacy::Vector& v)
 {
     return Spacy::Mixin::get(Spacy::cast_ref<Spacy::Real>(v));
 }
