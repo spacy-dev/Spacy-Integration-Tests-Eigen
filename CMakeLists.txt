@@ -28,7 +28,7 @@ foreach(TEST ${SRC_LIST})
   add_executable(${TEST_UNIQUE_NAME} ${TEST})
   target_include_directories(${TEST_UNIQUE_NAME} PUBLIC
       $<INSTALL_INTERFACE:include>
-      $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+      $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>)
   target_include_directories(${TEST_UNIQUE_NAME} ${EIGEN3_INCLUDE_DIR})
   target_link_libraries(${TEST_UNIQUE_NAME} PRIVATE mocks Spacy::Spacy GTest::GTest Threads::Threads)
 add_test(${TEST_UNIQUE_NAME} ${PROJECT_BINARY_DIR}/${TEST_UNIQUE_NAME})
