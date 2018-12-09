@@ -14,7 +14,7 @@ find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)
 
 aux_source_directory(Mock MOCK_SRC_LIST)
-add_library(mocks PRIVATE ${MOCK_SRC_LIST})
+add_library(mocks ${MOCK_SRC_LIST})
 target_compile_features(mocks PUBLIC cxx_std_14)
 
 include_directories(${EIGEN3_INCLUDE_DIR})
