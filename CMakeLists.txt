@@ -17,6 +17,8 @@ aux_source_directory(Mock MOCK_SRC_LIST)
 add_library(mocks PRIVATE ${MOCK_SRC_LIST})
 target_compile_features(mocks PUBLIC cxx_std_14)
 
+include_directories(${EIGEN3_INCLUDE_DIR})
+
 aux_source_directory(Eigen SRC_LIST)
 include(CTest)
 enable_testing()
@@ -29,7 +31,6 @@ foreach(TEST ${SRC_LIST})
   target_include_directories(${TEST_UNIQUE_NAME} PUBLIC
       $<INSTALL_INTERFACE:include>
       $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>)
-  target_include_directories(${TEST_UNIQUE_NAME} ${EIGEN3_INCLUDE_DIR})
   target_link_libraries(${TEST_UNIQUE_NAME} PRIVATE mocks Spacy::Spacy GTest::GTest Threads::Threads)
 add_test(${TEST_UNIQUE_NAME} ${PROJECT_BINARY_DIR}/${TEST_UNIQUE_NAME})
 endforeach()
