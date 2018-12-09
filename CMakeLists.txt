@@ -26,7 +26,9 @@ foreach(TEST ${SRC_LIST})
   string(REGEX REPLACE "/" "_" TEST_DIR ${TEST_DIR})
   set(TEST_UNIQUE_NAME "${TEST_DIR}_${TEST_NAME}")
   add_executable(${TEST_UNIQUE_NAME} ${TEST})
-  target_include_directories(${TEST_UNIQUE_NAME} ${PROJECT_SOURCE_DIR})
+  target_include_directories(${TEST_UNIQUE_NAME} PUBLIC
+      $<INSTALL_INTERFACE:include>
+      $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
   target_include_directories(${TEST_UNIQUE_NAME} ${EIGEN3_INCLUDE_DIR})
   target_link_libraries(${TEST_UNIQUE_NAME} PRIVATE mocks Spacy::Spacy GTest::GTest Threads::Threads)
 add_test(${TEST_UNIQUE_NAME} ${PROJECT_BINARY_DIR}/${TEST_UNIQUE_NAME})
