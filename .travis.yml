@@ -11,8 +11,8 @@ addons:
     - libboost-dev
     - g++-5
     - gcc-5
-    - g++-6
-    - gcc-6
+    - g++-7
+    - gcc-7
 
 env:
   # Workaround for https://github.com/travis-ci/travis-ci/issues/4681
@@ -26,12 +26,12 @@ matrix:
     # LINUX
     # GCC 5
     - os: linux
-      env: COMPILER=g++-5 CCOMPILER=gcc-5 COMPUTE_COVERAGE=false
+      env: COMPILER=g++-5 CCOMPILER=gcc-5
       compiler: gcc
 
-    # GCC 6
+    # GCC 7
     - os: linux
-      env: COMPILER=g++-6 CCOMPILER=gcc-6 GCOV=gcov-6 COMPUTE_COVERAGE=true MAKE_DOC=true
+      env: COMPILER=g++-7 CCOMPILER=gcc-7
       compiler: gcc
 
 install:
