@@ -5,10 +5,11 @@ language: c++
 addons:
   apt:
     sources: &sources
+    - sourceline: 'ppa:mhier/libboost-latest'
     - ubuntu-toolchain-r-test
 
     packages:
-    - libboost-dev
+    - boost1.67
     - g++-5
     - gcc-5
     - g++-7
