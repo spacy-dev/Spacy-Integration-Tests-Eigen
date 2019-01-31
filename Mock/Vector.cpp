@@ -56,6 +56,27 @@ namespace Mock
   {}
 
 
+  Spacy::ContiguousIterator< double > Vector::begin()
+  {
+      return Spacy::ContiguousIterator< double >( &value_ );
+  }
+
+  Spacy::ContiguousIterator< double > Vector::end()
+  {
+      return Spacy::ContiguousIterator< double >( &value_ + 1 );
+  }
+
+  Spacy::ContiguousIterator< const double > Vector::begin() const
+  {
+      return Spacy::ContiguousIterator< const double >( &value_ );
+  }
+
+  Spacy::ContiguousIterator< const double > Vector::end() const
+  {
+      return Spacy::ContiguousIterator< const double >( &value_ + 1 );
+  }
+
+
   Vector VectorCreator::operator()(const Spacy::VectorSpace* space) const
   {
     return Vector{*space};

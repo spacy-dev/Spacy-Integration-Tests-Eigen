@@ -1,5 +1,7 @@
 #pragma once
 
+#include <Spacy/Util/Base/VectorBase.h>
+
 #include <string>
 
 namespace Spacy
@@ -35,6 +37,12 @@ namespace Mock
         const Spacy::VectorSpace& space() const;
 
         void toFile(const std::string&) const;
+
+        Spacy::ContiguousIterator< double > begin();
+        Spacy::ContiguousIterator< double > end();
+
+        Spacy::ContiguousIterator< const double > begin() const;
+        Spacy::ContiguousIterator< const double > end() const;
 
     private:
         friend const double& value(const Vector& v) { return v.value_; }
