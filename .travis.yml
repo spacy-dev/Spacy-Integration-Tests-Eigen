@@ -7,6 +7,7 @@ addons:
   apt:
     packages:
     - libeigen3-dev
+    - libboost-dev
     - cmake
     - g++-10
     - gcc-10
