@@ -1,19 +1,15 @@
+dist: focal
 sudo: required
 
 language: c++
 
 addons:
   apt:
-    sources: &sources
-    - sourceline: 'ppa:mhier/libboost-latest'
-    - ubuntu-toolchain-r-test
-
     packages:
-    - boost1.67
-    - g++-5
-    - gcc-5
-    - g++-7
-    - gcc-7
+    - libeigen3-dev
+    - cmake
+    - g++-10
+    - gcc-10
 
 env:
   # Workaround for https://github.com/travis-ci/travis-ci/issues/4681
@@ -27,12 +23,7 @@ matrix:
     # LINUX
     # GCC 5
     - os: linux
-      env: COMPILER=g++-5 CCOMPILER=gcc-5
-      compiler: gcc
-
-    # GCC 7
-    - os: linux
-      env: COMPILER=g++-7 CCOMPILER=gcc-7
+      env: COMPILER=g++-10 CCOMPILER=gcc-10
       compiler: gcc
 
 install:
@@ -45,16 +36,6 @@ install:
   # Override compiler if needed
   ############################################################################
   - if [[ "${COMPILER}" != "" ]]; then export CXX=${COMPILER}; export CC=${CCOMPILER}; fi
-
-  ############################################################################
-  # Install cmake
-  ############################################################################
-  - |
-    sudo apt purge cmake
-    cd $DEPS
-    wget http://github.com/Kitware/CMake/releases/download/v3.13.1/cmake-3.13.1.tar.gz
-    tar xzf cmake-3.13.1.tar.gz && cd cmake-3.13.1
-    ./bootstrap && make && sudo make install
     
   ############################################################################
   # Install gtest
@@ -72,14 +53,6 @@ install:
   - cmake .. && sudo cmake --build . --target install
 
   ############################################################################
-  # Install Eigen
-  ############################################################################
-
-  - cd ${DEPS}
-  - git clone https://github.com/eigenteam/eigen-git-mirror.git
-  - cd eigen-git-mirror && mkdir build && cd build && cmake .. && sudo make install
-
-  ############################################################################
   # Install Spacy
   ############################################################################
   - cd ${DEPS}
@@ -90,5 +63,5 @@ script:
   - cd ${TRAVIS_BUILD_DIR}
   - mkdir build && cd build
   - cmake .. -DEigen=ON
-  - make -j2 && ctest
+  - cmake --build . && ctest
 
