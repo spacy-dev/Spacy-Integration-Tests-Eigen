@@ -103,7 +103,7 @@ TEST(Rn,Comparison)
 
   ASSERT_TRUE( spacy_v == spacy_w );
 
-  space.set_eps(1e-5);
+  space.setEps(1e-5);
   spacy_w.get()[0] = 1 - 5e-6;
 
   ASSERT_TRUE( spacy_v == spacy_w );
