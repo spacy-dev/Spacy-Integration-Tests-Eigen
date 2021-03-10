@@ -38,7 +38,7 @@ inline auto mockValue(const Spacy::Vector& x)
 inline auto createMockBanachSpace(bool defaultIndex=false)
 {
     using namespace Spacy;
-    return VectorSpace( Mock::VectorCreator() , Mock::Norm() ,  defaultIndex );
+    return VectorSpace( Mock::VectorCreator() , Mock::Norm() , "" ,  defaultIndex );
 }
 
 inline auto createMockHilbertSpace()
