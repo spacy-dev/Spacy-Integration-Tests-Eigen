@@ -8,6 +8,7 @@ addons:
     packages:
     - libeigen3-dev
     - libboost-dev
+    - liblapacke-dev
     - cmake
     - g++-10
     - gcc-10
